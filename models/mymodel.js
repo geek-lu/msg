@@ -1,0 +1,25 @@
+var heroModel={
+    "hid": Number,
+    "hname": String,
+    "hdw": String,
+    "zdlx": String,
+    "star": Number,
+    "stroy":String,
+    "heroimg":String,
+    "md":String,
+    "attr": String,
+    "hj": String,
+    "speed": String,
+    "ll": String,
+    "mj": String,
+    "zl": String,
+    "jn1":  Object,
+    "jn2": Object,
+    "jn3":  Object,
+    "jn4":  Object,
+    "xytj":  Object,
+    "yytf":  Object,
+    "tjjd":  Object,
+    "yxzj": Object
+}
+module.exports=heroModel

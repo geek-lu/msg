@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css"/>
+		<link rel="stylesheet" href="css/top.css"/>
+		<link rel="stylesheet" href="css/middle.css" />
+		<link rel="stylesheet" href="css/bottom.css" />
+		<link rel="stylesheet" href="css/heros_details.css" />
+		<script src="js/vue.js"></script>
+		<script src="js/vue-router.js"></script>
+		<script src="js/vue-resource.js"></script>
+	</head>
+	<body>
+	<!--顶部菜单-->
+		<div class="top">
+			<div class="top_center">
+				<a href=""><img src="img/topBar_logo.jpg"/><a>
+				<p class="top_center_first">
+					<img src="img/b_20171122112350xh1r.jpg"/>
+				</p>
+				<p class="top_center_second">
+					<a href="">充值</a>
+					<a href="register.html">注册</a>
+					<a href="login.html">登录</a>
+					<a href="">电魂旗舰店</a>
+				</p>
+				<div class="top_center_last">
+					电魂游戏	
+					<i></i>
+					<div style="display: none;">
+						<ul>
+							<li>客户端游戏</li>
+							<li>梦三国</li>
+							<li>梦塔防</li>
+						</ul>
+						<ul>
+							<li>手机游戏</li>
+							<li>梦梦爱三国/li>
+							<li>梦三国</li>
+							<li>星梦冲突</li>
+							<li>更多&gt;&gt;</li>
+						</ul>
+						<ul></ul>
+					</div>
+				</div>
+			</div>	
+		</div>
+	<!---中部左div---->
+		<div class="middle" id="example">
+			<div class="middle_left">	
+				<div class="middle_daohang">
+					<a href="" class="dhwidth msg_logo"></a>
+					<a href="" class="dhwidth download"></a>
+					<ul class="txula">
+						<li><a href="" class="txula1">帐号充值</a></li>
+						<li><a href="" class="txula2">账户充值</a></li>
+						<li><a href="" class="txula3">日志更新</a></li>
+						<li><a href="" class="txula4">新手礼包</a></li>
+					</ul>
+					<ul class="cbmain">
+						<li><a href="" class="cba1 wm">官网首页</a></li>
+						<li>	
+							<a class="cba2 wm">资讯中心</a>
+							<div class="close">
+							<a href="">官方资讯</a>
+							<a href="">游戏公告</a>
+							<a href="">赛事信息</a>
+							<a href="">商城推荐</a>
+							<a href="">媒体新闻</a>
+							</div>
+						</li>
+						<li>
+							<a class="cba3 wm">游戏资料</a>
+							<div class="close">
+								<a href="">英雄资料</a>
+								<a href="">物品道具</a>
+								<a href="">地图信息</a>
+								<a href="">新手指南</a>
+								<a href="">讲武堂</a>
+							</div>
+						</li>
+						<li>
+							<a class="cba4 wm">赛事活动</a>
+							<div class="close">
+								<a href="">赛事中心</a>
+								<a href="">活动中心</a>
+							</div>
+						</li>
+						<li>
+							<a class="cba5 wm">梦之旅程</a>
+							<div class="close">
+								<a href="">更新日志</a>
+								<a href="">官方橙帖</a>
+								<a href="">历届版本</a>
+								<a href="">梦三世界</a>
+							</div>
+						</li>
+						<li>
+							<a  class="cba6 wm">安全服务</a>
+							<div class="close">
+								<a href="">手机统军令</a>
+								<a href="">防盗攻略</a>
+								<a href="">BUG提交</a>
+								<a href="">外挂举报</a>
+							</div>
+						</li>
+						<li><a href="" class="cba7 wm">主题网吧</a></li>
+						<li><a href="" class="cba8 wm">至尊VIP</a></li>
+						<li><a href="" class="cba9 wm">官方论坛</a></li>
+					</ul>
+					<ul class="zxbxtb">
+						<li>
+							<a href="">
+								<i class="zxbtb1"></i>
+								<br>梦三YY
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="zxbtb2"></i>
+								<br>口袋梦三
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="zxbtb3"></i>
+								<br>电魂天猫
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="zxbtb4"></i>
+								<br>官方微信
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="zxbtb5"></i>
+								<br>腾讯微博
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="zxbtb6"></i>
+								<br>新浪微博
+							</a>
+						</li>
+					</ul>
+					<div class="kfzx">
+						<p>0571-56690669</p>
+						<ul>
+							<li><a href="">账号管理</a></li>
+							<li><a href="">安全解绑</a></li>
+							<li><a href="">密码找回</a></li>
+							<li><a href="">更改邮箱</a></li>
+							<li><a href="">密保手机</a></li>
+							<li><a href="">微信服务</a></li>
+						</ul>
+						<a href="">进入客服中心</a>
+					</div>
+				</div>
+			</div>
+			<!--加载英雄列表-->
+			<div class="hero">
+				<div class="hero_main">
+					<div class="hero_title_top">	
+						<a href="" class="xuanzhong	">英雄列表</a>
+						<a href="" >英雄战绩</a>
+					</div>
+					<div class="hero_title">
+						<span>您所在的位置：首页 > 英雄列表 > {{heroMsg.hname}}</span>
+					</div>
+					<div class="hero_details">
+						<div class="hero_desc">
+							<div class="hero_pic">
+								<img :src="heroMsg.md" alt="" />
+							</div>
+							<div class="hero_jbxx">
+								<div class="xingji">
+									<span>上手难度:</span>
+									<em class="xingxing"></em>
+								</div>
+								<p class="hero_name">
+									<span>Hero Name:</span>
+									<span class="hname">{{heroMsg.hname}}</span>
+								</p>
+								<p class="bjstory">
+									{{heroMsg.stroy}}
+								</p>
+								<p class="cssx">
+									<span><i></i><span>{{heroMsg.attr}}</span></span>
+									<span><i></i><span>{{heroMsg.hj}}</span></span>
+									<span><i></i><span>{{heroMsg.speed}}</span></span>
+									<span><i></i><span>{{heroMsg.ll}}</span></span>
+									<span><i></i><span>{{heroMsg.mj}}</span></span>
+									<span><i></i><span>{{heroMsg.zl}}</span></span>
+								</p>
+							</div>
+						</div>
+						<div class="erceng">
+							<div class="fleft">
+								<div class="jnjs">
+									<div class="bt"></div>
+									<div class="jntitle">
+										<a href="" class="hover">
+											<img :src="heroMsg.tjjd.jn1.img" alt="" />
+										</a>
+										<a href="">
+											<img :src="heroMsg.tjjd.jn2.img" alt="" />
+										</a>
+										<a href="">
+											<img :src="heroMsg.tjjd.jn3.img" alt="" />
+										</a>
+										<a href="">
+											<img :src="heroMsg.tjjd.jn4.img" alt="" />
+										</a>
+									</div>
+									<div class="jndiv">
+										<div class="jn1" style="display:block;">
+											<p class="jnmc"><em style="font-weight:bolder;font-size: 18px;">{{heroMsg.jn1.mc}}</em>&nbsp;<span>{{heroMsg.jn1.fs}}</span></p>
+											<p class="jnxq">范围伤害并定身</p>
+											<p class="flxh"><em>法力消耗：</em><span>{{heroMsg.jn1.flxh}}</span></p>
+											<p class="lqsj"><em>冷却时间：</em><span>{{heroMsg.jn1.lqsj}}</span></p>
+											<ul>
+												<li class="dj1"><em>【等级1】</em><span :title="heroMsg.jn1.dj[1]">{{heroMsg.jn1.dj[1]}}</span></li>
+												<li class="dj2"><em>【等级2】</em><span :title="heroMsg.jn1.dj[2]">{{heroMsg.jn1.dj[2]}}</span></li>
+												<li class="dj3"><em>【等级3】</em><span :title="heroMsg.jn1.dj[3]">{{heroMsg.jn1.dj[3]}}</span></li>
+												<li class="dj4"><em>【等级4】</em><span :title="heroMsg.jn1.dj[4]">{{heroMsg.jn1.dj[4]}}</span></li>
+											</ul>
+										</div>
+										<div class="jn2" style="display:none;">
+											<p class="jnmc"><em style="font-weight:bolder;font-size: 18px;">{{heroMsg.jn2.mc}}</em>&nbsp;<span>{{heroMsg.jn2.fs}}</span></p>
+											<p class="jnxq">{{heroMsg.jn2.js}}</p>
+											<p class="flxh"><em>法力消耗：</em><span>{{heroMsg.jn2.flxh}}</span></p>
+											<p class="lqsj"><em>冷却时间：</em><span>{{heroMsg.jn2.lqsj}}</span></p>
+											<ul>
+												<li class="dj1"><em>【等级1】</em><span :title="heroMsg.jn2.dj[1]">{{heroMsg.jn2.dj[1]}}</span></li>
+												<li class="dj2"><em>【等级2】</em><span :title="heroMsg.jn2.dj[2]">{{heroMsg.jn2.dj[2]}}</span></li>
+												<li class="dj3"><em>【等级3】</em><span :title="heroMsg.jn2.dj[3]">{{heroMsg.jn2.dj[3]}}</span></li>
+												<li class="dj4"><em>【等级4】</em><span :title="heroMsg.jn2.dj[4]">{{heroMsg.jn2.dj[4]}}</span></li>
+											</ul>
+										</div>
+										<div class="jn3" style="display:none;">
+											<p class="jnmc"><em style="font-weight:bolder;font-size: 18px;">{{heroMsg.jn3.mc}}</em>&nbsp;<span>{{heroMsg.jn3.fs}}</span></p>
+											<p class="jnxq">{{heroMsg.jn3.js}}</p>
+											<p class="flxh"><em>法力消耗：</em><span>{{heroMsg.jn3.flxh}}</span></p>
+											<p class="lqsj"><em>冷却时间：</em><span>{{heroMsg.jn3.lqsj}}</span></p>
+											<ul>
+												<li class="dj1"><em>【等级1】</em><span :title="heroMsg.jn3.dj[1]">{{heroMsg.jn3.dj[1]}}</span></li>
+												<li class="dj2"><em>【等级2】</em><span :title="heroMsg.jn3.dj[2]">{{heroMsg.jn3.dj[2]}}</span></li>
+												<li class="dj3"><em>【等级3】</em><span :title="heroMsg.jn3.dj[3]">{{heroMsg.jn3.dj[3]}}</span></li>
+												<li class="dj4"><em>【等级4】</em><span :title="heroMsg.jn3.dj[4]">{{heroMsg.jn3.dj[4]}}</span></li>
+											</ul>
+										</div>
+										<div class="jn4" style="display:none;">
+											<p class="jnmc"><em style="font-weight:bolder;font-size: 18px;">{{heroMsg.jn4.mc}}</em>&nbsp;<span>{{heroMsg.jn4.fs}}</span></p>
+											<p class="jnxq">{{heroMsg.jn4.js}}</p>
+											<p class="flxh"><em>法力消耗：</em><span>{{heroMsg.jn4.flxh}}</span></p>
+											<p class="lqsj"><em>冷却时间：</em><span>{{heroMsg.jn4.lqsj}}</span></p>
+											<ul>
+												<li class="dj1"><em>【等级1】</em><span :title="heroMsg.jn4.dj[1]">{{heroMsg.jn4.dj[1]}}</span></li>
+												<li class="dj2"><em>【等级2】</em><span :title="heroMsg.jn4.dj[2]">{{heroMsg.jn4.dj[2]}}</span></li>
+												<li class="dj3"><em>【等级3】</em><span :title="heroMsg.jn4.dj[3]">{{heroMsg.jn4.dj[3]}}</span></li>
+												<li class="dj4"><em>【等级4】</em><span :title="heroMsg.jn4.dj[4]">{{heroMsg.jn4.dj[4]}}</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="xytj">
+									<div class="bt"></div>
+									<div>
+										<ul>
+											<li>
+												<div>
+													<span>
+														<img :src="heroMsg.xytj.yl.img" alt="" />
+													</span>
+													<div>
+														<p>{{heroMsg.xytj.yl.mc}}</p>
+														<p>{{heroMsg.xytj.yl.xq}}</p>
+													</div>
+													<span>
+														<em style="color: #55EFE5;font-weight:bolder;">适用于：</em>
+														娱乐5V5
+													</span>
+												</div>
+											</li>
+											<li>
+												<div>
+													<span>
+														<img :src="heroMsg.xytj.gd.img" alt="" />
+													</span>
+													<div>
+														<p>{{heroMsg.xytj.gd.mc}}</p>
+														<p>{{heroMsg.xytj.gd.xq}}</p>
+													</div>
+													<span>
+														<em style="color: #55EFE5;font-weight:bolder;">适用于：</em>
+														官渡
+													</span>
+												</div>
+											</li>
+											<li>
+												<div>
+													<span>
+														<img :src="heroMsg.xytj.sgz.img" alt="" />
+													</span>
+													<div>
+														<p>{{heroMsg.xytj.sgz.mc}}</p>
+														<p style="width:270px;overflow-x: hidden">{{heroMsg.xytj.sgz.xq}}</p>
+													</div>
+													<span>
+														<em style="color: #55EFE5;font-weight:bolder;">适用于：</em>
+														三国志大战
+													</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="yltf">
+									<div class="bt"></div>
+									<div>
+										<ul>
+											<li>
+												<span :title="heroMsg.yytf[25][0]">{{heroMsg.yytf[25][0]}}</span>
+												<span :title="heroMsg.yytf[25][1]">{{heroMsg.yytf[25][1]}}</span>
+												<div>25</div>
+											</li>
+											<li>
+												<span :title="heroMsg.yytf[20][0]">{{heroMsg.yytf[20][0]}}</span>
+												<span :title="heroMsg.yytf[20][1]">{{heroMsg.yytf[20][1]}}</span>
+												<div>20</div>
+											</li>
+											<li>
+												<span :title="heroMsg.yytf[20][0]">{{heroMsg.yytf[15][0]}}</span>
+												<span :title="heroMsg.yytf[20][1]">{{heroMsg.yytf[15][1]}}</span>
+												<div>15</div>
+											</li>
+											<li>
+												<span :title="heroMsg.yytf[10][0]">{{heroMsg.yytf[10][0]}}</span>
+												<span :title="heroMsg.yytf[10][1]">{{heroMsg.yytf[10][1]}}</span>
+												<div>10</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tjzb">
+									<div class="bt"></div>
+									<div>
+										<div class="czlb">
+											<div>
+												<a href="" class="hover1">娱乐5V5</a>
+												<a href="">官渡10V10</a>
+												<a href="">三国志大战</a>
+											</div>
+											<div style="display: block" class="tjczdiv">
+												<p class="xxcztitle">出门推荐：</p>
+												<p class="xxcz cmcz">
+													<span>
+														<img src="S305.jpg" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+												</p>
+												<p class="xxcztitle">后期推荐：</p>
+												<p class="xxcz hqcz">
+													<span>
+														<img src="S305.jpg" alt="" />
+													</span>
+													<span>
+														
+													</span>
+													<span>
+														
+													</span>
+													<span>
+														
+													</span>
+													<span>
+														
+													</span>
+												</p>
+											</div>
+											<div style="display: none" class="tjczdiv">
+												<p class="xxcztitle">出门推荐：</p>
+												<p class="xxcz cmcz">
+													<span>
+														<img src="S307.jpg" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+												</p>
+												<p class="xxcztitle">后期推荐：</p>
+												<p class="xxcz hqcz">
+													<span>
+														<img src="S307.jpg" alt="" />
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+												</p>
+											</div>
+											<div style="display: none" class="tjczdiv">
+												<p class="xxcztitle">出门推荐：</p>
+												<p class="xxcz cmcz">
+													<span>
+														<img src="S306.jpg" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+													<span>
+														<img src="" alt="" />
+													</span>
+												</p>
+												<p class="xxcztitle">后期推荐：</p>
+												<p class="xxcz hqcz">
+													<span>
+														<img src="S306.jpg" alt="" />
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+													<span>
+
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fright">
+								<!--饼状图-->
+								<div class="bzzj">
+									<div class="bt"></div>
+									<div>
+										<div style="background:white;">
+											<div id="zjt" style="width: 300px;height:300px;">
+											<!--引入百度插件---->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--推荐加点-->
+								<div class="tjjd">
+									<div class="bt"></div>
+									<div>
+										<ul>
+											<li>
+												<span>
+													<img :src="heroMsg.tjjd.jn1.img" alt="" />
+												</span>
+												<p>
+													<span v-for="i of heroMsg.tjjd.jn1.jd">{{i}}</span>
+													
+												</p>
+											</li>
+											<li>
+												<span>
+													<img :src="heroMsg.tjjd.jn2.img" alt="" />
+												</span>
+												<p>
+													<span v-for="i of heroMsg.tjjd.jn2.jd">{{i}}</span>
+												</p>
+											</li>
+											<li>
+												<span>
+													<img :src="heroMsg.tjjd.jn3.img" alt="" />
+												</span>
+												<p>
+													<span v-for="i of heroMsg.tjjd.jn3.jd">{{i}}</span>
+													
+												</p>
+											</li>
+											<li>
+												<span>
+													<img :src="heroMsg.tjjd.jn4.img" alt="" />
+												</span>
+												<p>
+													<span v-for="i of heroMsg.tjjd.jn4.jd">{{i}}</span>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!---推荐攻略-->
+								<div class="tjgl">
+									<div class="bt"></div>
+									<div>
+										<ul>
+											<li>
+												<p>
+													<a href="">{{heroMsg.hname}}入门攻略 </a>
+												</p>
+												<p>
+													<span>2015-6-4</span>
+													娱乐三国无双
+												</p>
+											</li>
+											<li>
+												<p>
+													<a href="">{{heroMsg.hname}}入门攻略二 </a>
+												</p>
+												<p>
+													<span>2015-6-4</span>
+													娱乐三国无双
+												</p>
+											</li>
+											<li>
+												<p>
+													<a href="">{{heroMsg.hname}}进阶攻略</a>
+												</p>
+												<p>
+													<span>2015-6-4</span>
+													娱乐三国无双
+												</p>
+											</li>
+											<li>
+												<p>
+													<a href="">{{heroMsg.hname}}高手攻略 </a>
+												</p>
+												<p>
+													<span>2015-6-4</span>
+													娱乐三国无双
+												</p>
+											</li>
+											<li>
+												<p>
+													<a href="">{{heroMsg.hname}}技能全解析 </a>
+												</p>
+												<p>
+													<span>2015-6-4</span>
+													娱乐三国无双
+												</p>
+											</li>
+										</ul>
+										<a href=""></a>
+									</div>
+								</div>
+								<!--英雄荣誉-->
+								<div class="yxry">
+									<div class="bt"></div>
+									<div>
+										<ul>
+											<li>
+												<span></span>
+												<div>
+													<p>
+														<a href="">2014年娱乐星际赛</a>
+													</p>
+													<p>场均金钱第一</p>
+												</div>
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	<!--底部-->
+		<div class="bottom">	
+			<div>
+				<div class="last_left">
+					<a href=""></a>
+				</div>
+				<div class="last_right">
+					<p>杭州电魂网络科技股份有限公司版权所有丨2008-2017 Electronic Soul - All rights reserved</p>
+					<p>《增值电信业务经营许可证》编号：浙B2-20090296</p>
+					<p>网路文化经营许可证编号：浙网文【2012】0804-079号丨互联网出版许可证编号：新出网证（浙）45号</p>
+					<p>出版号：新广出审［2015］321号丨文化部网络游戏备案号：文网游备字［2011］C-RPG011号</p>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/echarts.js"></script>
+		<script src="js/walden.js"></script>
+		<script src="js/heros_details.js"></script>
+	<script>
+		if(window.history.length<=2){
+			window.location.href="http://192.168.1.116:3000/heros.html"
+		}
+        var app = new Vue({
+            el: '#example',
+            data: {
+                heroMsg: null,
+
+            },
+            created:function(){
+                this.heroMsg=JSON.parse(sessionStorage.msg)
+				console.log(this.heroMsg)
+            }
+
+
+        })
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+	html {
+		overflow: hidden;
+	}
+	body {
+		position: absolute;
+		margin: 0px;
+		padding: 0px;
+		background: #eee;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		font-family: arial;
+		font-size: 0.8em;
+	}
+	#screen {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		overflow: hidden;
+	}
+	#screen img, canvas { 
+		position: absolute;
+		left: -9999px;
+		cursor: pointer;
+        image-rendering: optimizeSpeed;
+
+	}
+	#screen .href {
+		border: #FFF dotted 1px;
+	}
+	#screen .fog { 
+		position: absolute;
+		background: #fff;
+		opacity: 0.1;
+		filter: alpha(opacity=10);
+	}
+	#command {
+		position:absolute;
+		left: 1em;
+		top: 1em;
+		width: 130px;
+		z-index: 30000;
+		background:#000;
+		border: #000 solid 1em;
+	}
+	#bar {
+		position:relative;
+		left: 1em;
+		top: 1em;
+		height: 160px;
+	}
+	#bar .button { 
+		position: absolute;
+		background: #222;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+	#bar .loaded { 
+		background: #666;
+	}
+	#bar .viewed { 
+		background: #fff;
+	}
+	#bar .selected { 
+		background: #f00;
+	}
+	#urlInfo {
+		position: absolute;
+		background: url(images/r.gif) no-repeat 0 4px;
+		visibility: hidden;
+		z-index: 30000;
+		padding-left: 12px;
+		cursor: pointer;
+	}
+</style>
+
+
+</head>
+
+<body>
+<div id="screen">
+	<div id="command">
+
+		<h1 style="color:red">游戏原画</h1>
+        <a href="" style="text-decoration: none;color:white">回到主页</a>
+		<div id="bar"></div>
+	</div>
+	<div id="urlInfo"></div>
+</div>
+
+<script type="text/javascript">
+/* ==== start script ==== */
+setTimeout(function() {
+	m3D.init(
+		[ 
+			{ src: '1.jpg' },
+            { src: '2.jpg' },
+			{ src: '3.jpg' },
+			{ src: '4.jpg' },
+			{ src: '5.jpg' },
+			{ src: '6.jpg' },
+			{ src: '7.jpg' },
+			{ src: '8.jpg' },
+			{ src: '9.jpg' },
+			{ src: '10.jpg' },
+			{ src: '11.jpg' },
+			{ src: '12.jpg' },
+			{ src: '13.jpg' },
+			{ src: '14.jpg' },
+			{ src: '15.jpg' },
+			{ src: '16.jpg' },
+			{ src: '17.jpg' },
+			{ src: '18.jpg' },
+			{ src: '19.jpg' },
+			{ src: '20.jpg' },
+
+		]
+	);
+}, 500);
+</script>
+<div style="text-align:center;">
+
+</div>
+<script type="text/javascript">
+
+var m3D = function () {
+	/* ---- 私有变量 ---- */
+	var diapo = [],
+		imb,
+		scr,
+		bar,
+		selected,
+		urlInfo,
+		imagesPath = "images/",
+		camera = {x:0, y:0, z:-650, s:0, fov: 500},
+		nw = 0,
+		nh = 0;
+	camera.setTarget = function (c0, t1) {
+		//如果t1-0的绝对值大于0.1
+		if (Math.abs(t1 - c0) > .1) {
+			camera.s = 1;
+			camera.p = 0;
+			camera.d = t1 - c0;
+		}
+	}
+	camera.tween = function (v) {
+		if (camera.s != 0) {
+			camera.p += camera.s;
+			camera[v] += camera.d * camera.p * .01;
+			if (camera.p == 10) camera.s = -1;
+			else if (camera.p == 0) camera.s = 0;
+		}
+		return camera.s;
+	}
+
+
+
+
+
+
+
+	/* ==== diapo构造函数 ==== */
+	var Diapo = function (n, img, x, y, z) {
+		if (img) {
+			this.isLoaded = false;
+			//如果画笔存在
+			if (document.createElement("canvas").getContext) {//=>this have a question
+				/* ----用画布代替图像（表演技巧） ---- */
+				this.srcImg = new Image();
+				this.srcImg.src = imagesPath + img.src;
+				this.img = document.createElement("canvas");
+				this.canvas = true;
+				//scr表示屏幕
+                //将图片添加到屏幕上去
+				scr.appendChild(this.img);
+			}
+			//继续为当前创建的元素绑定点击事件
+			/* ---- 图片点击事件---- */
+			this.img.onclick = function () {
+			    //上面camera.s可能等于1 0 或者-1，如果camera.s存在 打断点击事件执行
+				if (camera.s) return;
+				//上面构造函数，把this.isLoaded赋值为false
+				if (this.diapo.isLoaded) {//=》这又是个什么鬼！！！！！！！！！！！！！！！！！！
+					if (false) {
+                        /* ---- 跳转链接 ---- */
+                        //这个if中我咋感觉下面这句话没什么卵用
+                        //!!/=>猜测是如果当点图片已被点击然后处于中央位置时。再次点击跳转链接
+                        top.location.href = this.diapo.url;
+                    } else {
+						/* ---- 定义目标位置 ---- */
+						//猜测！：camera.tz相机的z轴，tx相机的x轴，ty相机的y轴
+						//相机的位置等于这个叫什么diapo.z的减去（camera的fov，上面赋值为500）
+						camera.tz = this.diapo.z - camera.fov;
+						camera.tx = this.diapo.x;
+						camera.ty = this.diapo.y;
+						/* ---- 点过的div加上白色 ---- */
+						if (selected) {
+						    //上面selected未赋值
+							//这几个是命令行的按钮  5行
+							selected.but.className = "button viewed";//类名
+							selected.img.className = "";//类名
+							selected.img.style.cursor = "pointer";//鼠标放上变成小手
+							urlInfo.style.visibility = "hidden";//样式
+						}
+						/* ---- 选择当前img---- */
+						//当前左侧按钮
+						this.diapo.but.className = "button selected";
+						//调用在动画期间禁用插值的方法！
+						interpolation(false);
+						selected = this.diapo;//-》？？？？？？？？？？？？？？？？
+					}
+				}
+			}
+			/* ---- 命令行按钮 ---- */
+			//当前this指的是Diapo对象，其中this.but是侧边小按钮
+			//this.img指的是创建的canvas
+			this.but = document.createElement('div');//创建按钮div
+			this.but.className = "button";//这个按钮的类名
+			bar.appendChild(this.but);//向bar中追加这个按钮
+			this.but.diapo = this;///---》？？？？？？？？？？？？？？？？
+			this.but.style.left = Math.round((this.but.offsetWidth  * 1.2) * (n % 4)) + 'px';//左侧按钮的left
+			this.but.style.top  = Math.round((this.but.offsetHeight * 1.2) * Math.floor(n / 4)) + 'px';//左侧按钮的top
+			this.but.onclick = this.img.onclick;//模拟执行
+			imb = this.img;//上面一个未赋值变量imb-》等于当前半透明div
+			this.img.diapo = this;
+			this.zi = 25000;
+		} else {
+		    //这个else接的是上面的if（img）？
+			//如果图片不存在生成半透明div？
+			/* ---- 透明div---- */
+			this.img = document.createElement('div');//创建dom元素div
+			this.isLoaded = true;//上面isloaded是false
+			this.img.className = "fog";//类名-》样式
+			scr.appendChild(this.img);//把这个半透明加到屏幕上去
+			this.w = 300;//----------------------------------------》宽高相关？z轴相关与半透明div相关
+			this.h = 300;
+			this.zi = 15000;
+		}
+		/* ---- 对象的变量 ---- */
+		this.x = x;//x，y，z为传入参数
+		this.y = y;
+		this.z = z;
+		this.css = this.img.style;
+	}
+
+
+
+
+
+
+
+
+	/* ==== 主要3d动画==== */
+	Diapo.prototype.anim = function () {
+	     //当前this指class为fog的div
+		if (this.isLoaded) {//->上面赋值为true
+			/* ---- 三维投影 ---- */
+			var x =this.x - camera.x;
+			var y = this.y - camera.y;
+			var z = this.z - camera.z;
+			if (z < 20) z += 5000;
+			var p = camera.fov / z;
+			var w = this.w * p;
+			var h = this.h * p;
+			/* ---- HTML渲染 ---- */
+			this.css.left   = Math.round(nw + x * p - w * .5) + 'px';
+			this.css.top    = Math.round(nh + y * p - h * .5) + 'px';  
+			this.css.width  = Math.round(w) + 'px';
+			this.css.height = Math.round(h) + 'px';
+			this.css.zIndex = this.zi - Math.round(z);
+		} else {
+			/* ----图像加载? ---- */
+			this.isLoaded = this.loading();
+		}
+	}
+
+
+
+
+
+
+	/* ==== onload 初始化==== */
+	Diapo.prototype.loading = function () {
+		if ((this.canvas && this.srcImg.complete)) {
+			if (this.canvas) {
+				/* ---- canvas版本 ---- */
+				this.w = this.srcImg.width;
+				this.h = this.srcImg.height;
+				//让画板宽度等于图片宽度
+				this.img.width = this.w;
+				this.img.height = this.h;
+				var context = this.img.getContext("2d");
+				//!!!画出图！！！
+				context.drawImage(this.srcImg, 0, 0, this.w, this.h);
+			}
+			/* ----按钮加载 ---- */
+			this.but.className += " loaded";
+			return true;
+		}
+		return false;
+	}
+	////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+	/* ==== 屏幕尺寸 ==== */
+	var resize = function () {
+		nw = scr.offsetWidth * .5;//screen的一半，屏幕的一般
+		nh = scr.offsetHeight * .5;
+	}
+
+
+
+
+
+
+
+
+
+	/* ====  在动画期间禁用插值==== *///-----》不太懂这个。。
+	var interpolation = function (bicubic) {//======>又是什么东西。。。
+		var i = 0, o;
+		while( o = diapo[i++] ) {
+			if (o.but) {
+				o.css.msInterpolationMode = bicubic ? 'bicubic' : 'nearest-neighbor'; // makes IE8 happy
+				o.css.imageRendering = bicubic ? 'optimizeQuality' : 'optimizeSpeed'; // does not really work...
+			}
+		}
+	}
+
+
+
+
+
+
+
+	/* ==== 初始化脚本 ==== */
+	var init = function (data) {
+		/* ---- containers ---- */
+		scr = document.getElementById("screen");
+		bar = document.getElementById("bar");
+		urlInfo = document.getElementById("urlInfo");
+		resize();
+		/* ---- 加载图片 ---- */
+		var i = 0, 
+		    o,
+			n = data.length;
+		while( o = data[i++] ) {
+            //console.log(o)
+			/* ---- 图片s ---- */
+			var x = 1000 * ((i % 4) - 1.5);
+			var y = Math.round(Math.random() * 4000) - 2000;
+			var z = i * (5000 / n);
+			diapo.push( new Diapo(i - 1, o, x, y, z));
+			/* ---- 透明框 ---- */
+			var k = diapo.length - 1;
+			for (var j = 0; j < 3; j++) {
+				var x = Math.round(Math.random() * 4000) - 2000;
+				var y = Math.round(Math.random() * 4000) - 2000;
+				diapo.push( new Diapo(k, null, x, y, z + 100));
+			}
+		}
+		/* ---- 引擎启动 ---- */
+		run();
+	}
+	////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+	/* ==== 主程序 ==== */
+	var run = function () {
+		/* ---- x轴移动 ---- */
+		if (camera.tx) {
+            if (!camera.s) camera.setTarget(camera.x, camera.tx);
+			var m = camera.tween('x');
+			if (!m) camera.tx = 0;
+		/* ---- y轴移动 ---- */
+		} else if (camera.ty) {
+			if (!camera.s) camera.setTarget(camera.y, camera.ty); 
+			var m = camera.tween('y');
+			if (!m) camera.ty = 0;
+		/* ---- z轴移动 ---- */
+		} else if (camera.tz) {
+			if (!camera.s) camera.setTarget(camera.z, camera.tz);
+			var m = camera.tween('z');
+			if (!m) {
+				/* ---- 动画结束 ---- */
+				camera.tz = 0;
+				interpolation(true);
+				/* ---- 激活链接---- */
+				if (selected.url) {
+					selected.img.style.cursor = "pointer";
+					selected.urlActive = true;
+					selected.img.className = "href";
+					urlInfo.diapo = selected;
+					urlInfo.onclick = selected.img.onclick;
+					urlInfo.innerHTML = selected.title || selected.url;
+					urlInfo.style.visibility = "visible";
+					urlInfo.style.color = selected.color || "#fff";
+					urlInfo.style.top = Math.round(selected.img.offsetTop + selected.img.offsetHeight - urlInfo.offsetHeight - 5) + "px";
+					urlInfo.style.left = Math.round(selected.img.offsetLeft + selected.img.offsetWidth - urlInfo.offsetWidth - 5) + "px";
+				} else {
+					selected.img.style.cursor = "default";
+				}
+			}
+		}
+		/* ---- 动画图像 ---- */
+		var i = 0, o;
+		while( o = diapo[i++] ) o.anim();
+		/* ----环？ ---- */
+		setTimeout(run, 32);
+	}
+	return {
+		////////////////////////////////////////////////////////////////////////////
+		/* ==== 初始化脚本 ==== */
+		init : init
+	}
+}();
+
+</script>
+</body>
+</html>

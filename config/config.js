@@ -1,0 +1,10 @@
+module.exports={
+   //"mongodb://username:password@hostname:port/database"
+  db:"mongodb://localhost/msg",
+  sessionSecret:"64位或128位随记字符串",
+  github:{
+    clientID:"9c17d04bf3e5e62604b5",
+    clientSecret:"f63a39ba24b3c935f8d779cbd8634eeeafcc5ae4",
+    callbackURL:"http://localhost:3000/users/oauth2/github/callback"//将来会在路由中有对应的路径
+  }
+}

@@ -1,0 +1,445 @@
+body{
+	background-image: url(../img/herodetailbg.jpg);
+    background-repeat: no-repeat;
+    background-position: 503px 42px;
+    background-color: #ECECEC;
+    min-width: 1700px;
+}
+.hero{
+    height: 2168px;
+    min-height: 1750px;
+    width: 862px;
+}
+.hero>.hero_main{
+	padding: 268px 0 50px;
+	padding-top: 230px;
+    min-height: 1650px;
+}
+.hero>.hero_main>.hero_title_top{
+	color: #333;
+	text-align: right;
+}
+.hero>.hero_main>.hero_title_top>a{
+	
+	margin-left:15px;
+	color: #000000;
+}
+
+.hero>.hero_main>.hero_title{
+	height:42px;
+	padding: 12px 0;
+    border-top: 4px solid #CD2D1D;
+    position: relative;
+    
+}
+.hero>.hero_main>.hero_title>input{
+	position: absolute;
+    right: 0;
+    top: 10px;
+    width: 240px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #D5DADD;
+    padding:5px;
+}
+.hero>.hero_main>.hero_details{
+	width:100%;
+	height:1700px;
+	margin-top: 20px;
+}
+.hero>.hero_main>.hero_details>.hero_desc{
+	width:100%;
+	height:306px;
+	background:white;
+	
+}
+.hero>.hero_main>.hero_details>.hero_desc>div{
+	float:left;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_pic{
+	height:306px;
+	width:245px;
+	margin-right: 20px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx{
+	padding-top: 30px;
+    width: 580px;
+    position: relative;
+
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.xingji{
+	position:absolute;
+	right:30px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.xingji>.xingxing{
+	display: inline-block;
+    width: 82px;
+    height: 14px;
+    background: url(../img/hd-level.png) no-repeat 0 0;
+    background-position: 0 -70px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.hero_name{
+	color: #CD2D1D;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	font-size: 20px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.hero_name>span:first-child{
+	font-weight: bolder;
+	color: #D3D3D3;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.bjstory{
+	line-height: 26px;
+    height: 158px;
+    overflow-y: auto;
+    border-bottom: 1px dotted #AAA;
+    color: #888;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx{
+    width: 580px;
+    height:60px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span{
+	display: inline-block;
+    margin-right: 10px;
+    line-height: 42px;
+    color: #AAA;
+    margin-top: 15px;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span>i{
+	display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    background: url(../img/attr-icon.jpg) no-repeat 0 0;
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span:nth-child(2)>i{
+	    background-position: -36px 0
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span:nth-child(3)>i{
+	    background-position: -72px 0
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span:nth-child(4)>i{
+	    background-position: -108px 0
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span:nth-child(5)>i{
+	    background-position: -144px 0
+}
+.hero>.hero_main>.hero_details>.hero_desc>.hero_jbxx>.cssx>span:nth-child(6)>i{
+	    background-position: -180px 0
+}
+.hero>.hero_main>.hero_details>.erceng{
+	margin-top: 30px;
+	width:100%; 
+	height:1370px; 
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft{
+	float: left;
+	margin-right: 10px;
+    width: 550px;
+    height:100%;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright{
+	float: left;
+	width: 300px;
+	height:100%;
+}
+.erceng .bt{
+	height: 20px;
+    background: url(../img/hero-sprite.png) no-repeat 0 0;
+    text-indent: -999em;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>.bt{
+    background-position: 0 -40px;	
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>.bt{
+	 background:url(../img/ho-ta-title.png) no-repeat 0 0;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>.bt{
+	background-position: 0 -100px;	
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.bzzj>.bt{
+	background-position: 0 -20px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>.bt{
+	background-position: 0 -80px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>.bt{
+	background-position: 0 -60px;	
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.yxry>.bt{
+	background-position: 0 -120px;	
+}
+.erceng>div>div>div:nth-child(2){
+	margin-top: 15px
+}
+.erceng>div>div{margin-top: 25px}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jntitle{
+	background: #F0F0F0;
+    border-top: 5px solid #D7D7D7;
+}
+
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jntitle>a{
+	margin-top: -5px;
+    display: inline-block;
+    padding: 15px 20px;
+    border-top: 5px solid #d7D7D7;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jntitle>a.hover{
+    background: #fff;
+    border-color: #00A39A;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jndiv>div{
+	padding: 20px 0 0 30px;
+    height: 205px;
+    color: #555;
+    background: white;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jndiv>div em{
+	color: #00A398;
+}	
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jndiv>div>.jnxq{
+	margin-top: 10px
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jndiv>div>ul{
+	margin-top: 15px;
+	display: block;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.jnjs>.jndiv>div>ul>li{
+	float: left;
+    margin-right: 10px;
+    width: 235px;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul{
+	padding: 0 20px;
+	background:white;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li{
+	padding: 25px 0 22px;
+    border-bottom: 1px dotted #AAA;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li:last-child{
+	border: none;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div{
+	width:100%;
+	height:46px;
+	position:relative;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div>span:nth-child(1){
+	float:left;
+	margin-right:15px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div>div{
+	float: left;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div>div>p:nth-child(1){
+	color: #555;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div>div>p:nth-child(2){
+    color: #888;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.xytj>div:nth-child(2)>ul>li>div>span:nth-child(3){
+	position: absolute;
+    right: -25px;
+    top: 4px;
+    width: 162px;
+    height: 44px;
+    line-height: 38px;
+    text-indent: 20px;
+    color: #fff;
+    background: url(../img/hero-label.png) no-repeat 0 0;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>div:nth-child(2)>ul{
+	padding: 15px 20px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>div:nth-child(2)>ul>li{
+	position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    height: 40px;
+    border-bottom: 1px dotted #aaaaaa;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>div:nth-child(2)>ul>li>div{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 155px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -78px;
+    margin-top: -27px;
+    background-image: url(../img/bg-level.png);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>div:nth-child(2)>ul>li>span:nth-child(1){
+	float: left;
+    padding-left: 25px;
+    line-height: 40px;
+    width: 155px;
+    height:40px;
+    color: #555;
+    overflow: hidden;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.yltf>div:nth-child(2)>ul>li>span:nth-child(2){
+	float: right;
+	line-height: 40px;
+    width: 155px;
+    height:40px;
+    color: #555;
+    overflow: hidden;
+}
+
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>div:first-child{
+
+    width: 120px;
+    background: #F0F0F0;
+    border-left: 5px solid #D7D7D7;
+	float: left
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>div:first-child>a{
+	margin-left: -5px;
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    line-height: 80px;
+    border-left: 5px solid #D7D7D7;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>div:first-child>a.hover1{
+    background: #fff;
+    border-color: #00A39A;
+    color: #00a398;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>.tjczdiv{
+	width: 393px;
+	float: left;
+	background:white;
+	padding-left:20px;	
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>.tjczdiv>.xxcztitle{
+	padding-top: 20px;
+    color: #bababa;
+   	font-size: 16px;
+   	font-weight: bolder;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>.tjczdiv>.xxcz{
+	padding-bottom: 15px;
+    border-bottom: 1px dotted #AAA;
+    margin-top: 10px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fleft>.tjzb>div:nth-child(2)>.czlb>.tjczdiv>p:last-child{
+	border:0;
+    margin-bottom:7px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul{
+	padding: 10px 20px;
+	background:white;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li{
+    width: 100%;
+    padding: 9px 0;
+    border-bottom: 1px dotted #aaaaaa
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li:last-child{
+	border: none;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li>span{
+	float: left;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li>p{
+	float: left;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li>p>span{
+	display: inline-block;
+    margin-top: 5px;
+    margin-left: 13px;
+    width: 25px;
+    height: 25px;
+    border: 5px solid #EDEDED;
+    background: #FFF;
+    text-align: center;
+    line-height: 25px;
+    color: #8e8e8e;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjjd>div:nth-child(2)>ul>li:after{
+	content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul{
+	padding: 10px 20px 10px;
+    border-bottom: 1px solid #EEE;
+    background:white;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul>li{
+	position: relative;
+    padding: 11px 0;
+    border-bottom: 1px dotted #AAA;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul>li:last-child{
+	border: 0;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul>li>p:first-child>a{
+	display: inline-block;
+    overflow: hidden;
+    width: 186px;
+    height: 16px;
+    line-height: 16px;
+    color: #555;
+    vertical-align: middle;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul>li>p:last-child{
+	height: 22px;
+    overflow: hidden;
+    color: #888;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>ul>li>p:last-child>span{
+	float: right;	
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.tjgl>div:nth-child(2)>a{
+	display: block;
+    width: 100%;
+    height: 62px;
+    background: url(../img/author-btn.png);
+    text-indent: -999em;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.yxry>div:nth-child(2)>ul{
+	padding: 8px 20px;
+	color: #555;
+	background:white;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.yxry>div:nth-child(2)>ul>li{
+	overflow: hidden;
+    padding: 12px 0 10px;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.yxry>div:nth-child(2)>ul>li>span{
+	margin-right: 10px;
+	width: 46px;
+    height: 46px;
+    background-position: 0 0;
+    display: inline-block;
+    background: url(../img/ho-plus.png) no-repeat 0 0;
+    float: left;
+}
+.hero>.hero_main>.hero_details>.erceng>.fright>.yxry>div:nth-child(2)>ul>li>div>p:first-child>a{
+	text-decoration: none;
+	color: #F60;
+}

@@ -1,0 +1,188 @@
+body{
+	background-image: url(../img/herobg.jpg);
+    background-repeat: no-repeat;
+    background-position: 503px 42px;
+    background-color: #ECECEC;
+    min-width: 1700px;
+}
+.hero{
+    height: 2168px;
+    min-height: 1750px;
+    width: 1150px;
+}
+.hero>.hero_main{
+	padding: 268px 0 50px;
+	padding-top: 230px;
+    min-height: 1650px;
+}
+.hero>.hero_main>.hero_title_top{
+	color: #333;
+	text-align: right;
+}
+.hero>.hero_main>.hero_title_top>a{
+	
+	margin-left:15px;
+	color: #000000;
+}
+.hero>.hero_main>.hero_title_top>.xuanzhong{
+	background: url(../img/status.png) no-repeat -164px -29px;
+    color: #fff;
+}
+.hero>.hero_main>.hero_title{
+	height:42px;
+	padding: 12px 0;
+    border-top: 4px solid #CD2D1D;
+    position: relative;
+    
+}
+.hero>.hero_main>.hero_title>input{
+	position: absolute;
+    right: 0;
+    top: 10px;
+    width: 240px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #D5DADD;
+    padding:5px;
+}
+.hero>.hero_main>.type{
+	position:relative;
+}
+.hero>.hero_main>.type>span{
+	display:inline-block;
+	background: white;
+	cursor: pointer;
+    color: #AFAFAF;
+    border-radius:3px;
+}
+.hero>.hero_main>.type>ul{
+	position: absolute;
+	width:86px;
+	height:24px;
+    display: none;
+}
+.hero>.hero_main>.type>.lxyj{
+	left:91px;	
+}
+.hero>.hero_main>.type>.lx{
+	left:182px;	
+}
+.hero>.hero_main>.type>ul>li{
+	text-align: center;
+	background: #efefef;
+}
+.hero>.hero_main>.type>ul>li:hover{
+	background:white ;
+}
+.hero>.hero_main>.hero_list{
+	width:1150px;
+	height:1755px;
+	background: #fff;
+	color:#333;
+	margin-top: 30px;
+}
+.hero>.hero_main>.hero_list>div{
+	float: left;
+}
+.hero>.hero_main>.hero_list>.wei{
+	border-right: 1px solid #EDEDED;
+    width: 306px;
+    height: 1750px;
+    background: #fff;
+    border-top: 5px solid #7F59A3;
+    text-align: center;
+}
+.hero>.hero_main>.hero_list>.shu{
+	border-right: 1px solid #EDEDED;
+    width: 306px;
+    height: 1750px;
+    background: #fff;
+    border-top: 5px solid #5D9B49;
+        text-align: center;
+}
+.hero>.hero_main>.hero_list>.wu{
+	border-right: 1px solid #EDEDED;
+    width: 306px;
+    height: 1750px;
+    background: #fff;
+    border-top: 5px solid #CC4335;
+        text-align: center;
+}
+.hero>.hero_main>.hero_list>.zhongli{
+	height: 1750px;
+    background: #fff;
+    border-top: 5px solid #7F59A3;
+    border-top-color: #E98030;
+    width: 228px;
+        text-align: center;
+}
+.hero>.hero_main>.hero_list>.wei>p{
+	display: inline-block;
+    margin-top: -1px;
+    width: 162px;
+    height: 48px;
+    background: url(../img/nation-tl.png) no-repeat 0 -1px;
+    text-indent: -999em;
+}
+.hero>.hero_main>.hero_list>.shu>p{
+	display: inline-block;
+    margin-top: -1px;
+    width: 162px;
+    height: 48px;
+    background: url(../img/nation-tl.png) no-repeat 0 -1px;
+    background-position: -162px -1px;
+    text-indent: -999em;
+}
+.hero>.hero_main>.hero_list>.wu>p{
+	display: inline-block;
+    margin-top: -1px;
+    width: 162px;
+    height: 48px;
+    background: url(../img/nation-tl.png) no-repeat 0 -1px;
+    background-position: -162px -1px;
+    text-indent: -999em;
+    background-position: -324px -1px;
+}
+.hero>.hero_main>.hero_list>.zhongli>p{
+	display: inline-block;
+    margin-top: -1px;
+    width: 162px;
+    height: 48px;
+    background: url(../img/nation-tl.png) no-repeat 0 -1px;
+    background-position: -162px -1px;
+    text-indent: -999em;
+	background-position: -486px -1px;
+}
+.hero>.hero_main>.hero_list>div>ul{
+    margin-left: 22px;
+    margin-top: 30px;
+}
+.hero>.hero_main>.hero_list>div>ul>li{
+	float: left;
+    margin: 0 20px 20px 0;
+    width: 74px;
+    height: 98px;
+    overflow: hidden;
+}
+.hero>.hero_main>.hero_list>div>ul>li>a{
+	display: block;
+    width: 100%;
+    height:100%;
+    color: #666;
+}
+.hero>.hero_main>.hero_list>div>ul>li>a:hover{
+    color: white;
+    background: #CD2D1D;
+}
+.hero>.hero_main>.hero_list>div>ul>li>a:hover span{
+    border-color: #CD2D1D;
+}
+.hero>.hero_main>.hero_list>div>ul>li>a>span{
+	display: inline-block;
+    border: 5px solid #E2E2E2;
+    height:64px;
+}
+.hero>.hero_main>.hero_list>div>ul>li>a>span>img{
+	width:64px;
+    height:64px;
+}

@@ -1,0 +1,33 @@
+.bottom{
+    width: 100%;
+    min-width: 1040px;
+    background: #141414;
+    color: #c8c8c8;
+    overflow: hidden;
+}
+.bottom>div{
+	font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1";
+    overflow: hidden;
+    padding: 36px 0;
+    width: 1000px;
+    margin: 0 0 0 30%;
+
+}
+.bottom>div>.last_left{
+    border-right: 1px solid #e2e2e2;
+    padding-left: 30px;
+    width: 244px;
+}
+.bottom>div>.last_left>a{
+	width: 147px;
+	float: left;
+    height: 54px;
+	background: url(../img/dh-logo-black.png) no-repeat left top;
+}
+.bottom>div>.last_right{
+	padding-left: 40px;
+    width: 685px;
+    float: left;
+    box-sizing: content-box;
+    color: #c8c8c8;
+}

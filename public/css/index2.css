@@ -1,0 +1,85 @@
+.bigbanner{
+    width:100%;
+    height:590px;
+}
+.zyyxjj{
+    height:544px;
+    position: relative;
+    background-color:#F9F9F9;
+    background-image: url("../img/index/guanyu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:-150px;
+    transition: all linear 1s;
+}
+.zyyxjj>.shangceng{
+    width: 950px;
+    position: absolute;
+    z-index: 1;
+    top:48px;
+    left:15%;
+}
+.zyyxjj>.shangceng>.sclf{
+    width:100px;
+    float: left;
+}
+.zyyxjj>.shangceng>.sclf>ul>li{
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+    padding-left: 28px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.zyyxjj>.shangceng>.scrt{
+    margin-left: 100px;
+    float: left;
+}
+.zyyxjj>.shangceng>.scrt>div:first-child{
+    width: 388px;
+    border-bottom: 1px solid #e1e2e6;
+}
+.zyyxjj>.shangceng>.scrt>div:first-child>span:first-child{
+    margin-right: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #850f13;
+}
+.zyyxjj>.shangceng>.scrt>div:first-child>span:nth-child(2){
+    font-size: 30px;
+    font-weight: 700;
+    color: #696768;
+}
+.zyyxjj>.shangceng>.scrt>div:nth-child(2){
+    padding: 7px 0;
+}
+.zyyxjj>.shangceng>.scrt>div:nth-child(2)>span{
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 10px;
+    margin-right: 5px;
+    background-color: #dbc980;
+    color: #5b5b5b;
+    border-radius: 3px;
+}
+.zyyxjj>.shangceng>.scrt>p{
+    color: #333;
+    margin-bottom:  38px;
+}
+.zyyxjj>.shangceng>.scrt>div:nth-child(4){
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.zyyxjj>.shangceng>.scrt>div:nth-child(4)>span:first-child{
+    color: #987e11;
+    float: left;
+    margin-right: 10px;
+    height: 14px;
+    line-height: 14px;
+}
+.zyyxjj>.shangceng>.scrt>img{
+    width: 388px;
+    height: 200px;
+}
