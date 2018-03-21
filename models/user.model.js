@@ -3,16 +3,16 @@ var mongoose=require('mongoose'),
 
 var UserSchema=new Schema({
   uid:Number,
-  email:{
-    type:String,
-    unique:true,
-    match:[
-      /^.+\@.+\..+$/i,
-      "邮箱格式不正确"
-    ],
-    trim:true,
-    require:"邮箱不能为空!"
-  },
+  // email:{
+  //   type:String,
+  //   unique:true,
+  //   match:[
+  //     /^.+\@.+\..+$/i,
+  //     "邮箱格式不正确"
+  //   ],
+  //   trim:true,
+  //   require:"邮箱不能为空!"
+  // },
   uname:{
     type:String,
     unique:true,
@@ -29,7 +29,7 @@ var UserSchema=new Schema({
   provider:String,//记录用户使用何种OAuth平台登录
   providerId:String,//第三方网站提供的用户id
   providerData:{},//保存从第三方获得的用户信息
-},{collection:"xz_user"});
+},{collection:"msg_user"});
 UserSchema.statics.findUniqueUsername=
 function(username,suffix,callback){
   console.log("调用UserSchema的静态方法findUniqueUsername，返回不重复的用户名");

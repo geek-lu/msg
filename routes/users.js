@@ -5,7 +5,7 @@ var passport=require('passport');
 
 router.route("/signup")
   .post(user.signup)
-router.route("/signin")
+router.route("/signin") 
   .post(user.signin)//(req,res,next)
 router.route("/isLogin")
   .get(user.isLogin)
